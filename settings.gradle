@@ -1,0 +1,2 @@
+rootProject.name = "ANCIAR Technologies"
+include ':app'
