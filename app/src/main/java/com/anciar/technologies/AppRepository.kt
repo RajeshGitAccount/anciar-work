@@ -1,8 +1,14 @@
 package com.anciar.technologies
 
 import com.anciar.technologies.main.model.SectionsModel
+import com.anciar.technologies.main.model.UserModel
+import com.anciar.technologies.network.ApiService
+import javax.inject.Inject
 
-class AppRepository() {
+class AppRepository @Inject constructor(val apiService: ApiService) {
+
+
+    suspend fun getuserData():UserModel = apiService.getUserInfo()
 
     fun getRequiredInfo(): ArrayList<SectionsModel> {
 
